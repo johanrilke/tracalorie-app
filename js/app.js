@@ -201,6 +201,12 @@ class App {
 
         document.getElementById('workout-items')
             .addEventListener('click', this._removeItem.bind(this, 'workout'));
+
+        document.getElementById('filter-meals')
+            .addEventListener('keyup', this._filterItems.bind(this, 'meal'));
+
+        document.getElementById('filter-workouts')
+            .addEventListener('keyup', this._filterItems.bind(this, 'workout'));
     }
 
     _newItem(type, e) {
@@ -245,6 +251,20 @@ class App {
                 e.target.closest('.card').remove();
             }
         }
+    }
+
+    _filterItems(type, e) {
+        const text = e.target.value.toLowerCase();
+        document.querySelectorAll(`#${type}-items .card`)
+            .forEach((item) => {
+                const name = item.firstElementChild.firstElementChild.textContent;
+                
+                if (name.toLowerCase().indexOf(text) !== -1) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            })
     }
 }
 
