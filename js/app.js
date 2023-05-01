@@ -9,6 +9,7 @@ class CalorieTracker {
 
         // Run Methods upon Class Instantiation
         
+        this._displayCaloriesLimit();
         this._displayCaloriesTotal();
     }
 
@@ -31,6 +32,11 @@ class CalorieTracker {
     _displayCaloriesTotal() {
         const totalCaloriesEl = document.querySelector('#calories-total');
         totalCaloriesEl.innerHTML = this._totalCalories;
+    }
+
+    _displayCaloriesLimit() {
+        const calorieLimitEl = document.querySelector('#calories-limit');
+        calorieLimitEl.innerHTML = this._calorieLimit;
     }
 
     _render() {
