@@ -1,0 +1,6 @@
+Add Display Differences Tracker Stats
+
+These includes three functions in the Base CalorieTracker Class:
+- _displayCaloriesConsumed: Display the consumption of meals
+- _displayCaloriesBurned: Display the burn of workouts
+- _displayCaloriesRemaing: Display the remaining calorie needed to burn
