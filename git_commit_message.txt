@@ -11,3 +11,12 @@ This includes the addition of the following methods:
 - static Storage method to get the total calories
 - static Storage method to update the total calories
 - call the update method in the Base Tracker's public method whenever there is change (add or remove) to meals or workouts
+
+Persist Meals to Local Storage
+
+This includes the following changes:
+- static Storage method to get the meals array from the local storage
+- static Storage method to save a new meal to the meals array
+- call the save new meal method in the Base Tracker's public method when adding a new meal
+- display the newly added meal
+- call the display method from the App instance
