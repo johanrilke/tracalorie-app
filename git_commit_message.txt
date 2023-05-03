@@ -4,3 +4,10 @@ These includes three functions in the Base CalorieTracker Class:
 - _displayCaloriesConsumed: Display the consumption of meals
 - _displayCaloriesBurned: Display the burn of workouts
 - _displayCaloriesRemaing: Display the remaining calorie needed to burn
+
+Persist Total Calories to Local Storage
+
+This includes the addition of the following methods:
+- static Storage method to get the total calories
+- static Storage method to update the total calories
+- call the update method in the Base Tracker's public method whenever there is change (add or remove) to meals or workouts
